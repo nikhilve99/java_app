@@ -10,7 +10,7 @@ pipeline {
         stage('unit test case'){
             steps {
                 sh 'mvn test'
-                }
+                
             }
         }
     }
