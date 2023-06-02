@@ -1,3 +1,4 @@
+@Library('nik-shared-lib')
 pipeline {
     agent any
     stages{
