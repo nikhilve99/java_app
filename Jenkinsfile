@@ -4,7 +4,10 @@ pipeline {
         stage('Git Checkout'){
             steps {
                 script {
-                    git branch: 'Dev', credentialsId: 'token_key_github', url: 'https://github.com/nikhilve99/java_app.git'
+                    gitCheckout(
+                        branch: "main"
+                        url: "https://github.com/nikhilve99/java_app.git"
+                    )
                 }
             }
         }
