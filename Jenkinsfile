@@ -7,5 +7,12 @@ pipeline {
            git branch: 'Dev', url: 'https://github.com/nikhilve99/java_app.git'
             }
         }
+        stage('unit test case'){
+            steps {
+                script{
+                    mvnTest()
+                }
+            }
+        }
     }
 }
