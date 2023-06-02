@@ -4,13 +4,14 @@ pipeline {
     stages{
         stage('Git Checkout'){
             steps {
-           git branch: 'Dev', url: 'https://github.com/nikhilve99/java_app.git'
+           git branch: 'master', url: 'https://github.com/nikhilve99/node_hello_world.git'
             }
         }
         stage('unit test case'){
             steps {
-                sh 'mvn test'
-                
+                script{
+                    npmTest()
+                }                
             }
         }
     }
